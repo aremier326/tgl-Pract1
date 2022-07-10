@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using tgl_pract1.Models;
 
 namespace tgl_pract1
 {
@@ -6,7 +8,21 @@ namespace tgl_pract1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Figure> figures = new List<Figure>()
+            {
+                new Circle(5),
+                new Rectangle(1, 5),
+                new Square1(19),
+                new Square2(3),
+                new Triangle(2, 6, 3)
+            };
+
+            foreach (var f in figures)
+            {
+                Console.WriteLine(f);
+            }
+
+ 
         }
     }
 }
